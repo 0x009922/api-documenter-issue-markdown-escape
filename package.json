@@ -1,0 +1,21 @@
+{
+  "name": "api-documenter-issue-markdown-escape",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "run-s compile-dts api:extract api:document",
+    "compile-dts": "tsc",
+    "api:extract": "api-extractor run --local --diagnostics",
+    "api:document": "api-documenter markdown --input-folder temp --output-folder docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@microsoft/api-documenter": "^7.13.63",
+    "@microsoft/api-extractor": "^7.18.16",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^4.4.4"
+  }
+}
